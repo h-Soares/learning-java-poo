@@ -58,11 +58,3 @@ public class Program {  //Debbugger for Java - Console (para arrumar onde sai a 
         scan.close(); 
     }
 }
-
-
-
-
-
-
-
-
