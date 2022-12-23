@@ -14,6 +14,7 @@ public class App {
         Account acc2 = bacc; //pois BusinessAccount é um Account, e as características são de Account, porque é do tipo Account.
         Account acc3 = new BusinessAccount(1, "Annie", 0.0, 50.0);
         Account acc4 = new SavingAccount(862, "Frank", 0.0, 10.0);
+        test(bacc); //também é upcasting
         
         
         //DOWNCASTING: superclasse para subclasse
@@ -34,5 +35,9 @@ public class App {
             sacc.updateBalance();
             System.out.println("Update successful!");
         }
+    }
+    static void test(Account test)
+    {
+        System.out.println(test.getNumber());
     }
 }

@@ -12,6 +12,12 @@ public class BusinessAccount extends Account { //BusinessAccount É UM Account
         this.loanLimit = loanLimit;
     }
 
+    @Override 
+    public void withdraw(double amount) {
+        super.withdraw(amount); //usa esse método da superclasse e
+        balance -= 2.0;         //desconta mais dois.
+    }
+
     public void loan(double amount) {
         if(amount <= loanLimit)
             balance += amount - 10; //preferir não usar protected. Mas em alguns casos é necessário, ex: quando não é permitido set.

@@ -15,8 +15,8 @@ public class Account {
     }
 
     public void withdraw(double amount) {
-        if((balance -= amount) >= 0)
-            balance -= amount;
+        if((balance -= (amount + 5.0)) >= 0)
+            balance -= (amount + 5.0);
         else
             System.out.println("Can t do it!");
     }
