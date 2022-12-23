@@ -8,11 +8,13 @@ public class App {
     public static void main(String[] args)  {
         Account acc = new Account(137, "Jon", 100.0);
         BusinessAccount bacc = new BusinessAccount(182, "Adrien", 130.0, 500.0);
+        System.out.println(acc.getNumber());
 
         //UPCASTING: subclasse para superclasse.
 
         Account acc2 = bacc; //pois BusinessAccount é um Account, e as características são de Account, porque é do tipo Account.
         Account acc3 = new BusinessAccount(1, "Annie", 0.0, 50.0);
+        System.out.println(acc3.getHolder());
         Account acc4 = new SavingAccount(862, "Frank", 0.0, 10.0);
         test(bacc); //também é upcasting
         
@@ -21,6 +23,7 @@ public class App {
 
         //BusinessAccount bacc2 = acc2; //ERRO, pois não tem como saber se esse Account está, de fato, associado a um BusinessAccount.
         BusinessAccount bacc2 = (BusinessAccount) acc2; //garante que o Account acc2 está associado a um BusinessAccount. É do tipo BusinessAccount.
+        System.out.println(bacc2.getLoanLimit());
         //BusinessAccount bacc3 = (BusinessAccount) acc4; //ERRO em tempo de execução, pois acc4 está associado a um SavingAccount, e não a um BusinessAccount.
         //Para corrigir isso e conferir se é do mesmo tipo, usa-se instaceof:
 
