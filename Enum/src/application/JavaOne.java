@@ -32,11 +32,3 @@ public class JavaOne {  //Debbugger for Java - Console (para arrumar onde sai a 
             System.out.println(number.numberTest);
     }
 }
-
-
-
-
-
-
-
-
