@@ -29,6 +29,7 @@ public class App {
         Scanner scan = new Scanner(System.in);
         BigDecimal test2 = new BigDecimal(scan.next()); //se for criar um Big Decimal pelo construtor, dar preferência à String.
         System.out.println(test2);
+        System.out.println(test2.multiply(BigDecimal.valueOf(2)));
         scan.close();
         BigDecimal test3 = BigDecimal.valueOf(1);
         test3 = test3.divide(BigDecimal.valueOf(3), 100,  RoundingMode.HALF_EVEN);

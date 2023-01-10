@@ -13,8 +13,9 @@ import java.util.Scanner;
 public class App { //Exceção para arquivos: IOException, herda de Exception, é obrigado a tratar
     public static void main(String[] args) { //NAO RODAR, CRIA NOVOS ARQUIVOS!
         //File permite fazer diversas manipulações com o arquivo
-        File myFile = new File("C:\\Users\\hiago\\OneDrive\\Documentos\\testing.txt"); //usa-se \\ para \
-            
+        File myFile = new File("C:\\Users\\hiago\\OneDrive\\Documentos\\JAVA VSCode Exemplos\\Curso Nelio\\Arquivos\\src\\testing.txt"); //usa-se \\ para \
+        //também pode só passar o nome do arquivo entre " " que ele é CRIADO no mesmo diretório --> caminho relativo.
+         
         //entre o Scanner, BufferedReader e FileReader, usar BufferedReader, pois tem melhor performance.
         //VERSÃO 1
         Scanner scan = null; //ao instanciar o Scanner por meio do arquivo, pode ocorrer uma exceção IOException
@@ -76,7 +77,7 @@ public class App { //Exceção para arquivos: IOException, herda de Exception, �
     //e GARANTE que serão fechados ao final do bloco. Com isso, não é necessário fazer o fechamento manual, como 
     //feito anteriormente.
     //Utilizando o código a cima com o try-with-resources: 
-    String path = "C:\\Users\\hiago\\OneDrive\\Documentos\\testing.txt";
+    String path = "C:\\Users\\hiago\\OneDrive\\Documentos\\JAVA VSCode Exemplos\\Curso Nelio\\Arquivos\\src\\testing.txt";
 
     try (BufferedReader br = new BufferedReader(new FileReader(path))) { //não é declarado separadamente porque não será fechado manualmente.
         String line = br.readLine();
@@ -157,7 +158,7 @@ public class App { //Exceção para arquivos: IOException, herda de Exception, �
     scanner.close();
 
     //Dentre várias funções de File, temos getName(), para acessar o nome do arquivo, 
-    //getParent(), para acessar o caminho
+    //getParent(), para acessar o caminho, desprezando o nome do arquivo. É bom para criar subpastas com mkdir()
     //getPath(), para caminho e nome... Entre outras funções em File...
    }
 }
