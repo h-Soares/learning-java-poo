@@ -3,7 +3,9 @@ package app;
 public class App {
     public static void main(String[] args) {
         //CONCEITO PADRÃO: é parecido com uma classe abstrata, com métodos abstratos. Uma classe pode implementar várias interfaces.
-        //Estabelece um contrato que a classe deve seguir.
+        //Estabelece um contrato que a classe deve seguir. Também é uma relação do tipo É UM.
+        /*HERANÇA x INTERFACE: 
+          Herança: reúso (de atributos, métodos, etc.).  Interface: contrato a ser seguido. */
         //É útil para minimizar a dependência entre classes (útil em composição) e para deixar a manutenção menos dificultosa.
         //Uma interface é abstrata, seus métodos são abstratos e suas variáveis são static final
         //"O problema é que se você instanciar as dependências dentro da classe que você está trabalhando você vai acoplar 
@@ -20,5 +22,9 @@ public class App {
         suas dependências.  O responsável, geralmente, é a classe principal. */
         /* Injeção de dependência - uma das formas de realizar a inversão de controle: um componente externo instancia a dependência,
         que é então injetada no objeto "pai".  O responsável, geralmente, é o Construtor. */   
+
+        /* A coesão é o grau com o qual um módulo tem uma responsabilidade única e bem definida. 
+        O acoplamento é o grau com o qual um módulo depende de outros módulos para seu funcionamento. 
+        O ideal, para que um sistema seja flexível e compreensível, são módulos com alta coesão e baixo acoplamento. */
     }
 }

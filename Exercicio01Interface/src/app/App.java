@@ -35,7 +35,7 @@ public class App {
 
         System.out.println("\nInstallments: ");
         for(Installment installment : contract.getInstallments())
-        System.out.println(installment);
+            System.out.println(installment);
 
         scan.close();
     }
