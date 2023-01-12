@@ -38,7 +38,7 @@ public class App {
         //A partir do Java 8, interfaces podem conter métodos concretos.
         //Serve para evitar a repetição de implementação em toda classe que implemente a interface e também a necessidade de 
         //se criar classes abstratas para fazer reuso da implementação. 
-        //Usa-se quando, EM UMA FUNÇÃO, os parâmetros, contas a serem feitas, etc. são os MESMOS para todas as classes que implementam
-        //a interface. No lugar de public usa-se DEFAULT.
+        //Usa-se quando, EM UMA FUNÇÃO, os parâmetros, contas a serem feitas, etc. são os MESMOS para algumas classes que implementam
+        //a interface. No lugar de public usa-se DEFAULT. Pode ser sobrescrito.
     }
 }
