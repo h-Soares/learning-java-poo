@@ -4,6 +4,8 @@ public class App {
     public static void main(String[] args) {
         //CONCEITO PADRÃO: é parecido com uma classe abstrata, com métodos abstratos. Uma classe pode implementar várias interfaces.
         //Estabelece um contrato que a classe deve seguir. Também é uma relação do tipo É UM.
+        //Não possuem construtores nem atributos. 
+        //Geralmente não são utilizados modificadores de acesso. 
         /*HERANÇA x INTERFACE: 
           Herança: reúso (de atributos, métodos, etc.).  Interface: contrato a ser seguido. */
         //É útil para minimizar a dependência entre classes (útil em composição) e para deixar a manutenção menos dificultosa.
@@ -26,5 +28,17 @@ public class App {
         /* A coesão é o grau com o qual um módulo tem uma responsabilidade única e bem definida. 
         O acoplamento é o grau com o qual um módulo depende de outros módulos para seu funcionamento. 
         O ideal, para que um sistema seja flexível e compreensível, são módulos com alta coesão e baixo acoplamento. */
+
+        //A interface Comparable<T> define os critérios de comparação de uma classe. É preciso implementá-la em uma classe 
+        //que deseja ordenar em uma lista. < 0; = 0; > 0; para menor, igual ou maior na comparação, respectivamente.
+        //essa interface possui apenas um método: int compareTo(T outro); nesse T coloca-se a própria classe.
+        //"O Comparable permite que uma instância de classe seja comparada com outra instância dela mesma."
+
+        //CONCEITO DEFAULT METHODS:  exemplificado em Exercicio03Interface
+        //A partir do Java 8, interfaces podem conter métodos concretos.
+        //Serve para evitar a repetição de implementação em toda classe que implemente a interface e também a necessidade de 
+        //se criar classes abstratas para fazer reuso da implementação. 
+        //Usa-se quando, EM UMA FUNÇÃO, os parâmetros, contas a serem feitas, etc. são os MESMOS para todas as classes que implementam
+        //a interface. No lugar de public usa-se DEFAULT.
     }
 }
