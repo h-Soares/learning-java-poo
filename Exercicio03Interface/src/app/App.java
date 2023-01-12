@@ -3,7 +3,8 @@ package app;
 import java.math.BigDecimal;
 import java.text.NumberFormat;
 import java.util.Scanner;
-import services.UsaInterestService;
+import services.BrazilInterestService;
+//import services.UsaInterestService;
 import services.interfaces.InterestService;
 
 public class App {
@@ -21,7 +22,7 @@ public class App {
             months = scan.nextInt();
         }
 
-        InterestService interestService = new UsaInterestService();
+        InterestService interestService = new BrazilInterestService();
         System.out.println(NumberFormat.getCurrencyInstance().format(interestService.payment(amount, months)));
 
         scan.close();
