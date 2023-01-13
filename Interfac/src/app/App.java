@@ -2,10 +2,16 @@ package app;
 
 public class App {
     public static void main(String[] args) {
-        //CONCEITO PADRÃO: é parecido com uma classe abstrata, com métodos abstratos. Uma classe pode implementar várias interfaces.
-        //Estabelece um contrato que a classe deve seguir. Também é uma relação do tipo É UM.
-        //Não possuem construtores nem atributos. 
-        //Geralmente não são utilizados modificadores de acesso. 
+        //CONCEITO PADRÃO: é parecido com uma classe abstrata, com métodos abstratos. Uma classe pode implementar várias interfaces:
+        //fazendo implements Interface1, Interface2, ..., InterfaceN.
+        //Estabelece um contrato que a classe deve seguir. Também é uma relação do tipo É UM --> Polimorfismo.
+        //Qualquer interface que contém um único método é conhecida como interface funcional.
+        //Não possuem construtores. 
+        //Uma interface pode declarar constantes. As constantes são implicitamente public, static e final (não precisa escrever). É 
+        //melhor usar se TODAS as classes que implementam a interface forem utilizar essas constantes. É comum ter uma INTERFACE DE
+        //CONSTANTES.
+        //Todos os métodos declarados em uma interface são implicitamente métodos public abstract (não precisa escrever).
+        //Permite que objetos de classes não relacionadas sejam processados polimorficamente.
         /*HERANÇA x INTERFACE: 
           Herança: reúso (de atributos, métodos, etc.).  Interface: contrato a ser seguido. */
         //É útil para minimizar a dependência entre classes (útil em composição) e para deixar a manutenção menos dificultosa.
@@ -40,5 +46,9 @@ public class App {
         //se criar classes abstratas para fazer reuso da implementação. 
         //Usa-se quando, EM UMA FUNÇÃO, os parâmetros, contas a serem feitas, etc. são os MESMOS para algumas classes que implementam
         //a interface. No lugar de public usa-se DEFAULT. Pode ser sobrescrito.
+
+        /* De acordo com a especificação da linguagem Java, o estilo adequado é declarar métodos abstract de uma interface sem as 
+        palavras-chave public e abstract, porque elas são redundantes nas declarações de método da interface. De maneira semelhante, as
+        constantes da interface devem ser declaradas sem as palavras-chave public, static e final, porque elas também são redundantes.*/
     }
 }
