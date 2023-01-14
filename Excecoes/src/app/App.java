@@ -9,6 +9,20 @@ public class App {
         //Catch: trecho de código a ser executado caso um erro ocorra. O tipo de exceção a ser tratada deve ser especificada.
         //ATENÇÃO: O tratamento de exceções deve ser usado em casos excepcionais. O mais recomendado é SEMPRE tratar os dados
         //para EVITAR que uma exceção seja lançada, utilizando while... etc.
+        //Em geral, pode-se IMPEDIR a ocorrência de exceções não verificadas com codificação adequada. (Deitel). Isto é, 
+        //não tratando com try-catch, mas impedindo que elas ocorram.
+        //Você pode evitar uma RuntimeException com um comando 'if'. Você não deve lidar com isso ou capturar (Oracle).
+        //Lance exceções de construtores para indicar que os parâmetros de construtor não são válidos — isso evita que 
+            //um objeto seja criado em um estado inválido.
+        //Colocar um bloco try em torno de uma parte significativa do código. Esse bloco try deve ser seguido
+        //por blocos catch que tratam cada possível exceção e os blocos catch devem ser seguidos por um único bloco finally (se algum
+        //for necessário) (Deitel).
+        //Se é conhecido o erro que pode ocorrer, usar estruturas condicionais para EVITAR que ele ocorra.
+            //Se for um erro inesperado, usar try catch.
+        /* Em resumo, o try/catch serve para tratar comportamentos inesperados, entretanto ele é bem mais lento 
+        que controlar o fluxo de um programa com if/else, ou seja, deve ser utilizado preferencialmente quando 
+        o desenvolvedor não tem como garantir que aquele código será executado com sucesso. (StackOverflow) */ 
+         
          
         Scanner scan =  new Scanner(System.in);
         /*
