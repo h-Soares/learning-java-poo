@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class App { //Exceção para arquivos: IOException, herda de Exception, é obrigado a tratar
+public class App { // Exceção para arquivos: IOException, herda de Exception, é obrigado a tratar
     public static void main(String[] args) { //NAO RODAR, CRIA NOVOS ARQUIVOS!
         //File permite fazer diversas manipulações com o arquivo
         File myFile = new File("C:\\Users\\hiago\\OneDrive\\Documentos\\JAVA VSCode Exemplos\\Curso Nelio\\Arquivos\\src\\testing.txt"); //usa-se \\ para \
@@ -49,7 +49,7 @@ public class App { //Exceção para arquivos: IOException, herda de Exception, �
 
         //try para tentar abrir o arquivo e ler
         try {
-            fr = new FileReader(path); //ou br = new BufferedReader(new FileReader(path));
+            fr = new FileReader(path); 
             br = new BufferedReader(fr);
 
             String line = br.readLine(); //se o arquivo estiver no final, retorna null.
@@ -76,6 +76,7 @@ public class App { //Exceção para arquivos: IOException, herda de Exception, �
     //O bloco try-with-resources é um bloco try que declara um ou mais recursos
     //e GARANTE que serão fechados ao final do bloco. Com isso, não é necessário fazer o fechamento manual, como 
     //feito anteriormente.
+    //try com recursos fechará o(s) recurso(s) quando o bloco try encerra com sucesso ou por causa de uma exceção (Deitel).
     //Utilizando o código a cima com o try-with-resources: 
     String path = "C:\\Users\\hiago\\OneDrive\\Documentos\\JAVA VSCode Exemplos\\Curso Nelio\\Arquivos\\src\\testing.txt";
 
@@ -136,7 +137,7 @@ public class App { //Exceção para arquivos: IOException, herda de Exception, �
     }
     
     System.out.println();
-    //Listagem de pastas/diretórios em uma pasta/diretório: 
+    //Listagem de pastas/diretórios e arquivos em uma pasta/diretório: 
     System.out.println("Enter a folder path: ");
     Scanner scanner = new Scanner(System.in);
     String folderPath = scanner.nextLine();
@@ -160,5 +161,56 @@ public class App { //Exceção para arquivos: IOException, herda de Exception, �
     //Dentre várias funções de File, temos getName(), para acessar o nome do arquivo, 
     //getParent(), para acessar o caminho, desprezando o nome do arquivo. É bom para criar subpastas com mkdir()
     //getPath(), para caminho e nome... Entre outras funções em File...
+    /* Classe Paths — fornece os métodos static utilizados para obter um objeto Path representando um local de arquivo ou diretório.
+        Também tem a interface Path: classes que implementam essa interface representam o local de um arquivo ou diretório. */
+    /* Classe Files — oferece os métodos static para manipulações de arquivos e diretórios comuns, como copiar arquivos; criar e
+    excluir arquivos e diretórios; obter informações sobre arquivos e diretórios; ler o conteúdo dos arquivos; obter objetos que 
+    permitem manipular o conteúdo de arquivos e diretórios; e mais. */
+    /* Interface DirectoryStream — os objetos das classes que implementam essa interface possibilitam que um programa itere pelo
+    conteúdo de um diretório. */
+    //As classes BufferedReader e BufferedWriter armazenam em buffer os fluxos baseados em caracteres.
+    //As classes FileReader e FileWriter realizam E/S de arquivos baseados em caracteres.
+    /* EXEMPLIFICAÇÃO: 
+
+    Path path = Paths.get("C:\\Users\\hiago\\OneDrive\\Documentos\\tesTT.txt");
+        if(Files.exists(path)) {
+            System.out.println("EXISTS!");   
+            System.out.printf("%s a directory!%n", Files.isDirectory(path) ? "Is" : "Isn't");
+            System.out.println("Filename: " + path.getFileName());
+            System.out.printf("%s a absolute path!%n", path.isAbsolute() ? "Is" : "Isn't");
+            System.out.println("Last modified in: " + Files.getLastModifiedTime(path)); //Lança IOException
+            System.out.println("Size: " + Files.size(path));
+            System.out.println("Path: " + path);
+            System.out.println("Absolute path: " + path.toAbsolutePath());
+        }   
+        else
+            System.out.println("DON'T EXISTS!");
+
+        System.out.println();
+
+        Path path2 = Paths.get("C:\\Users\\hiago\\OneDrive\\Documentos\\JAVA VSCode Exemplos\\Curso Nelio\\Arquivos\\src\\TESTING");
+        if(Files.exists(path2)) {
+            System.out.println("EXISTS!");   
+            System.out.printf("%s a directory!%n", Files.isDirectory(path2) ? "Is" : "Isn't");
+            System.out.println("Filename: " + path2.getFileName());
+            System.out.printf("%s a absolute path!%n", path2.isAbsolute() ? "Is" : "Isn't");
+            System.out.println("Last modified in: " + Files.getLastModifiedTime(path2)); //Lança IOException, pois o arquivo pode
+            System.out.println("Size: " + Files.size(path2));                            //ter sido excluído durante a execução.
+            System.out.println("path2: " + path2);
+            System.out.println("Absolute path: " + path2.toAbsolutePath());
+
+            if(Files.isDirectory(path2)) {
+                DirectoryStream<Path> directoryStream = Files.newDirectoryStream(path2);
+                for(Path p : directoryStream) {
+                    if(Files.isDirectory(p))
+                        System.out.println(p);
+                }
+            }
+        }   
+        else
+            System.out.println("DON'T EXISTS!");
+        
+        String separator = File.separator; //File.separator para obter o caractere de separador adequado do computador local.
+        //Utilize \\ para inserir um \ em uma literal de string. */
    }
 }
