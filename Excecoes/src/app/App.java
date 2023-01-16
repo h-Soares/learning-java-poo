@@ -21,7 +21,10 @@ public class App {
             //Se for um erro inesperado, usar try catch.
         /* Em resumo, o try/catch serve para tratar comportamentos inesperados, entretanto ele é bem mais lento 
         que controlar o fluxo de um programa com if/else, ou seja, deve ser utilizado preferencialmente quando 
-        o desenvolvedor não tem como garantir que aquele código será executado com sucesso. (StackOverflow) */ 
+        o desenvolvedor não tem como garantir que aquele código será executado com sucesso. (StackOverflow) */
+        //Não faz sentido deixar passar um erro de programação (RuntimeExceptions).
+        //Você só deve capturar exceções que sejam inevitáveis por uma razão ou outra.
+
          
          
         Scanner scan =  new Scanner(System.in);
