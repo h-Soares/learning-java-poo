@@ -61,6 +61,8 @@ public class App {
                 Number x = myNumbs.get(0) //não permitido: index 0 pode não ser um Number, pode ser uma String.
              */
 
+        //Usar isso mais em métodos, atribuições de listas...
+
         ////em geral: <T> T nomeDoMetodo(T obj)..., quando a classe não é parametrizada.
     }
 }
