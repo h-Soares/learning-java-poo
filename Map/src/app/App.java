@@ -14,7 +14,7 @@ public class App {
 
         Implementações:
         HashMap - mais rápido (O(1) em tabela hash) e não ordenado.
-        TreeMap - mais lento (O(logN) em árvore rubro-negra) e ordenado pela CHAVE.
+        TreeMap - mais lento (O(logN) em árvore rubro-negra) e ordenado pela CHAVE, com seu Comparable<T> ou Comparator<T>.
         LinkedHashMap - velocidade intermediária e elementos na ordem em que são inseridos.
 
         Métodos importantes:
