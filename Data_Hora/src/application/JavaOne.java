@@ -115,6 +115,8 @@ public class JavaOne {  //Debbugger for Java - Console (para arrumar onde sai a 
 
         //Para Instant é a mesma coisa. 
 
+        //Também é bom utilizar a classe Period.
+
         for(String name : ZoneId.getAvailableZoneIds()) //fusos - horários permitidos.
             System.out.println(name);
 

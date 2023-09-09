@@ -118,6 +118,7 @@ public class App {
         IMPORTANTE: quando for fazer alguma operação, utilizar mapTo... para evitar overhead e boxing and unboxing.
         IMPORTANTE: usar map antes de filter. Porque se fizer filter -> map, determinado método é invocado duas vezes: 
             uma vez dentro do filtro e depois na função de mapeamento. A operação de mapeamento faz parte da operação de filtragem.
+            TALVEZ NÃO.... APAGAR ISSO SEPA.......
         
          Para criar uma stream de linhas a partir do conteúdo de um arquivo texto (I/O), podemos chamar o 
             método estático Files.lines(Path path). Assim, é possível descobrir a quantidade de linhas que um arquivo possui, 
